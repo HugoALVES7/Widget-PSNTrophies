@@ -36,7 +36,7 @@ struct PSNSnapshot: Codable, Hashable {
 
 extension PSNSnapshot {
     static let sample = PSNSnapshot(
-        onlineId: "Joueur_PSN",
+        onlineId: "Player_One",
         avatarData: nil,
         level: 427,
         levelProgress: 64,

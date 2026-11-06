@@ -1,134 +1,135 @@
-# 🏆 Trophées PSN — widget macOS
+# 🏆 PSN Trophies — macOS widget
 
-Un widget natif pour ton bureau Mac qui affiche tes **trophées PlayStation** dans le style Apple : niveau, platine / or / argent / bronze, nombre de jeux, jeux terminés à 100 %, complétion moyenne et tes derniers jeux joués.
+🇬🇧 **English** · 🇫🇷 [Français](README.fr.md)
+
+A native widget for your Mac desktop that shows your **PlayStation trophies** in Apple's style: level, platinum / gold / silver / bronze, number of games, games completed at 100%, average completion and your most recently played games.
 
 <p align="center">
-  <img src="docs/widgets-dark.png" alt="Widget en mode sombre" width="820">
+  <img src="docs/widgets-dark.png" alt="Widget in dark mode" width="820">
 </p>
 
 <p align="center">
-  <img src="docs/widgets-light.png" alt="Widget en mode clair" width="820">
+  <img src="docs/widgets-light.png" alt="Widget in light mode" width="820">
 </p>
 
-<sub>Captures réalisées avec des données fictives.</sub>
+<sub>Screenshots made with fake data.</sub>
 
-- **3 tailles** : petit, moyen, grand
-- **Suit l'apparence du Mac** : clair, sombre, teinté, transparent
-- **Mise à jour automatique** environ toutes les 30 minutes
-- **Données officielles** de PlayStation Network (les mêmes que PSNprofiles)
-- **Aucun serveur tiers** : ton Mac parle directement à Sony, rien n'est envoyé ailleurs
-
-> 🇬🇧 *English: a native macOS desktop widget showing your PlayStation trophies. Install steps below: Xcode + free Apple ID → `bash install.sh` → paste your NPSSO token in the app → add the widget.*
+- **3 sizes**: small, medium, large
+- **English or French**, following your Mac's language
+- **Follows your Mac's look**: light, dark, tinted, clear
+- **Updates automatically** about every 30 minutes
+- **Official PlayStation Network data** (the same data PSNprofiles uses)
+- **No third-party server**: your Mac talks directly to Sony, nothing is sent anywhere else
 
 ---
 
-## Ce qu'il te faut
+## What you need
 
 | | |
 |---|---|
-| 💻 Un Mac sous **macOS 14 Sonoma** ou plus récent | |
-| 🛠️ **Xcode** (gratuit) | [App Store](https://apps.apple.com/app/xcode/id497799835) |
-| 🍎 Un **identifiant Apple** (gratuit, celui de l'App Store suffit) | aucun abonnement développeur nécessaire |
-| 🎮 Un **compte PlayStation Network** | |
+| 💻 A Mac running **macOS 14 Sonoma** or later | |
+| 🛠️ **Xcode** (free) | [App Store](https://apps.apple.com/app/xcode/id497799835) |
+| 🍎 An **Apple ID** (free, your App Store one works) | no paid developer membership needed |
+| 🎮 A **PlayStation Network account** | |
 
-Compte environ **10 minutes** la première fois (hors téléchargement de Xcode).
-
----
-
-## Installation de A à Z
-
-### 1. Installer Xcode
-
-1. Installe **Xcode** depuis l'[App Store](https://apps.apple.com/app/xcode/id497799835). C'est gros (plusieurs Go), prévois du temps.
-2. **Ouvre Xcode une première fois.** Accepte la licence et laisse-le installer ses composants. Une fois l'écran d'accueil affiché, tu peux passer à la suite.
-
-### 2. Ajouter ton identifiant Apple dans Xcode
-
-Il sert à « signer » l'app : sans ça, macOS refuse d'afficher le widget.
-
-1. Dans la barre de menus : **Xcode → Réglages…** (raccourci `⌘ ,`).
-2. Onglet **Comptes** (*Accounts*).
-3. Clique sur **+** en bas à gauche → **Apple ID** → **Continuer**, puis connecte-toi.
-
-### 3. Créer ton certificat de développeur
-
-Toujours dans **Réglages → Comptes** :
-
-1. Sélectionne ton identifiant Apple à gauche, puis ton équipe **« Ton Nom (Personal Team) »** à droite.
-2. Clique sur **Gérer les certificats…** (*Manage Certificates…*).
-3. Clique sur **+** en bas à gauche → **Apple Development**.
-4. Un certificat apparaît dans la liste : clique sur **Terminé**. Tu peux fermer Xcode.
-
-### 4. Télécharger le projet
-
-Sur cette page GitHub : bouton vert **Code** → **Download ZIP**. Ouvre le ZIP téléchargé pour obtenir le dossier du projet.
-
-<sub>Ou, si tu connais git : `git clone` ce dépôt.</sub>
-
-### 5. Lancer l'installation
-
-**Option facile :** dans le dossier du projet, fais un **clic droit sur `Installer.command` → Ouvrir**, puis confirme **Ouvrir**. La première fois, macOS demande une confirmation : c'est normal, le fichier vient d'Internet.
-
-**Option Terminal :** ouvre l'app **Terminal**, tape `bash ` (avec un espace), glisse le fichier `install.sh` dans la fenêtre, puis appuie sur **Entrée**.
-
-Le script fait tout seul :
-
-```
-▸ Vérification de Xcode                          ✓
-▸ Recherche de ton compte développeur Apple      ✓ Team ID : XXXXXXXXXX
-▸ Compilation (1 à 2 minutes la première fois)   ✓
-▸ Installation dans le dossier Applications      ✓
-🏆 Terminé !
-```
-
-À la fin, l'app **Trophées PSN** s'ouvre.
-
-<sub>Si macOS demande l'accès au trousseau pendant la compilation, entre le mot de passe de ta session Mac et clique sur **Toujours autoriser**.</sub>
-
-### 6. Connecter ton compte PlayStation
-
-L'app a besoin d'un jeton appelé **NPSSO** pour lire tes trophées. Il ne se récupère qu'une fois, et l'app reste ensuite connectée environ 2 mois.
-
-1. Dans ton navigateur, connecte-toi sur **[playstation.com](https://www.playstation.com/)**.
-2. Dans le **même navigateur**, ouvre **[ca.account.sony.com/api/v1/ssocookie](https://ca.account.sony.com/api/v1/ssocookie)**.
-3. Tu vois une ligne du type `{"npsso":"aBcD1234…"}`. Copie **toute la ligne** ou seulement la valeur.
-4. Colle-la dans l'app **Trophées PSN** et clique sur **Connecter**.
-
-L'aperçu de tes stats apparaît dans l'app. Si macOS demande si l'app peut *accéder aux données d'autres apps*, clique sur **Autoriser** : c'est ce qui permet au widget de lire tes stats.
-
-> ⚠️ **Ne partage jamais ton jeton NPSSO** : il donne accès à ton compte PlayStation.
-
-### 7. Ajouter le widget au bureau
-
-1. **Clic droit sur le bureau** → **Modifier les widgets…**
-2. Cherche **« Trophées PSN »**.
-3. Choisis une taille et glisse-la sur le bureau (tu peux en mettre plusieurs).
-
-C'est fini ! 🎉
+Allow about **10 minutes** the first time, not counting the Xcode download.
 
 ---
 
-## Questions fréquentes et dépannage
+## Installation, step by step
+
+### 1. Install Xcode
+
+1. Install **Xcode** from the [App Store](https://apps.apple.com/app/xcode/id497799835). It's big (several GB), so give it some time.
+2. **Open Xcode once.** Accept the license and let it install its components. Once you see the welcome screen, you can move on.
+
+### 2. Add your Apple ID to Xcode
+
+Your Apple ID is used to "sign" the app. Without a signature, macOS won't show the widget.
+
+1. In the menu bar: **Xcode → Settings…** (shortcut `⌘ ,`).
+2. Open the **Accounts** tab.
+3. Click **+** at the bottom left → **Apple ID** → **Continue**, then sign in.
+
+### 3. Create your developer certificate
+
+Still in **Settings → Accounts**:
+
+1. Select your Apple ID on the left, then your **"Your Name (Personal Team)"** team on the right.
+2. Click **Manage Certificates…**
+3. Click **+** at the bottom left → **Apple Development**.
+4. A certificate appears in the list: click **Done**. You can close Xcode.
+
+### 4. Download the project
+
+On this GitHub page: green **Code** button → **Download ZIP**. Open the downloaded ZIP to get the project folder.
+
+<sub>Or, if you use git: `git clone` this repository.</sub>
+
+### 5. Run the installer
+
+**Easy way:** in the project folder, **right-click `Installer.command` → Open**, then confirm **Open**. macOS asks for confirmation the first time because the file comes from the internet. That's expected.
+
+**Terminal way:** open the **Terminal** app, type `bash ` (with a space), drag the `install.sh` file into the window, then press **Return**.
+
+The script does everything on its own:
+
+```
+▸ Checking Xcode                               ✓
+▸ Looking for your Apple developer account     ✓ Team ID : XXXXXXXXXX
+▸ Building (1–2 minutes the first time)        ✓
+▸ Installing into Applications                 ✓
+🏆 Done!
+```
+
+When it finishes, the **PSN Trophies** app opens.
+
+<sub>If macOS asks for keychain access during the build, enter your Mac login password and click **Always Allow**.</sub>
+
+### 6. Connect your PlayStation account
+
+The app needs a token called **NPSSO** to read your trophies. You only fetch it once, and the app then stays connected for about 2 months.
+
+1. In your browser, sign in at **[playstation.com](https://www.playstation.com/)**.
+2. In the **same browser**, open **[ca.account.sony.com/api/v1/ssocookie](https://ca.account.sony.com/api/v1/ssocookie)**.
+3. You'll see a line like `{"npsso":"aBcD1234…"}`. Copy **the whole line** or just the value.
+4. Paste it into the **PSN Trophies** app and click **Connect**.
+
+A preview of your stats appears in the app. If macOS asks whether the app may *access data from other apps*, click **Allow**: that's what lets the widget read your stats.
+
+> ⚠️ **Never share your NPSSO token**: it gives access to your PlayStation account.
+
+### 7. Add the widget to your desktop
+
+1. **Right-click the desktop** → **Edit Widgets…**
+2. Search for **"PSN Trophies"**.
+3. Pick a size and drag it onto the desktop. You can add several.
+
+You're done! 🎉
+
+---
+
+## FAQ and troubleshooting
 
 <details>
-<summary><b>Le widget s'affiche sans couleurs (gris / blanc)</b></summary>
+<summary><b>The widget has no colors (gray / white)</b></summary>
 
-C'est macOS qui décide, pas l'app :
+This is controlled by macOS, not by the app:
 
-- **Réglages Système → Bureau et Dock → Widgets → Style des widgets** : en mode **Monochrome**, tous les widgets restent toujours gris. En mode **Automatique**, ils deviennent monochromes dès qu'une fenêtre est au premier plan et reprennent leurs couleurs quand tu cliques sur le bureau. Choisis **Couleur** pour qu'ils restent toujours en couleur.
-- **Réglages Système → Apparence → Style des icônes et widgets** : en mode **Transparent** ou **Teinté**, tous les widgets, y compris celui-ci, suivent ce style, comme les icônes du Dock.
+- **System Settings → Desktop & Dock → Widgets → Widget style**: with **Monochrome**, every widget is always gray. With **Automatic**, widgets turn monochrome whenever a window is in front and get their colors back when you click the desktop. Choose **Full-color** to keep colors all the time.
+- **System Settings → Appearance → Icon & widget style**: with **Clear** or **Tinted**, every widget (this one included) follows that style, like the Dock icons.
 </details>
 
 <details>
-<summary><b>« Aucun certificat de développeur trouvé »</b></summary>
+<summary><b>"No developer certificate found"</b></summary>
 
-Refais l'[étape 3](#3-créer-ton-certificat-de-développeur), puis relance le script. Si tu as plusieurs comptes, tu peux choisir l'équipe à utiliser : `bash install.sh TONTEAMID`.
+Redo [step 3](#3-create-your-developer-certificate), then run the script again. If you have several accounts, you can pick the team to use: `bash install.sh YOURTEAMID`.
 </details>
 
 <details>
-<summary><b>« Xcode n'est pas encore configuré » ou « outils en ligne de commande »</b></summary>
+<summary><b>"Xcode isn't set up yet" or "Command Line Tools"</b></summary>
 
-Ouvre Xcode une fois et laisse-le terminer son installation. Si le script te le demande, lance aussi dans le Terminal :
+Open Xcode once and let it finish installing. If the script asks you to, also run this in Terminal:
 
 ```bash
 sudo xcode-select -s /Applications/Xcode.app
@@ -136,61 +137,62 @@ sudo xcode-select -s /Applications/Xcode.app
 </details>
 
 <details>
-<summary><b>« Jeton NPSSO invalide ou expiré »</b></summary>
+<summary><b>"Invalid or expired NPSSO token"</b></summary>
 
-Le jeton change chaque fois que tu te reconnectes sur playstation.com. Recommence l'[étape 6](#6-connecter-ton-compte-playstation) avec un jeton tout frais.
+The token changes every time you sign in again on playstation.com. Redo [step 6](#6-connect-your-playstation-account) with a fresh token.
 </details>
 
 <details>
-<summary><b>« Session PlayStation expirée »</b></summary>
+<summary><b>"PlayStation session expired"</b></summary>
 
-La connexion dure environ 2 mois. Ouvre l'app et recolle un nouveau jeton NPSSO (étape 6).
+The connection lasts about 2 months. Open the app and paste a new NPSSO token (step 6).
 </details>
 
 <details>
-<summary><b>Le widget n'apparaît pas dans la liste, ou affiche une ancienne version</b></summary>
+<summary><b>The widget isn't in the list, or shows an old version</b></summary>
 
-Ouvre l'app Trophées PSN une fois, attends quelques secondes, puis réessaie. Au besoin, retire le widget du bureau et remets-le, ou redémarre le Mac.
+Open the PSN Trophies app once, wait a few seconds, then try again. If needed, remove the widget from the desktop and add it back, or restart your Mac.
 </details>
 
 <details>
-<summary><b>L'app s'arrête de fonctionner au bout de quelques jours</b></summary>
+<summary><b>The app stops working after a few days</b></summary>
 
-Avec un identifiant Apple gratuit, Apple limite la durée de validité des apps que tu compiles toi-même. Il suffit de relancer `Installer.command` : ta connexion PSN est conservée.
+With a free Apple ID, Apple limits how long apps you build yourself stay valid. Just run `Installer.command` again: your PSN connection is kept.
 </details>
 
 <details>
-<summary><b>Mettre à jour ou désinstaller</b></summary>
+<summary><b>Update or uninstall</b></summary>
 
-- **Mettre à jour :** télécharge la nouvelle version du projet et relance `Installer.command`.
-- **Désinstaller :** retire le widget du bureau, clique sur **Se déconnecter** dans l'app, puis mets `/Applications/PSNTrophies.app` à la corbeille.
+- **Update:** download the new version of the project and run `Installer.command` again.
+- **Uninstall:** remove the widget from the desktop, click **Sign Out** in the app, then move `/Applications/PSNTrophies.app` to the Trash.
 </details>
 
 ---
 
-## Confidentialité
+## Privacy
 
-- Le code **ne contient aucune donnée personnelle**. Chacun compile l'app avec son propre compte Apple et se connecte avec son propre compte PSN.
-- Ton jeton NPSSO n'est envoyé **qu'aux serveurs de Sony**. L'app ne le garde pas : elle conserve seulement un jeton de rafraîchissement et tes dernières stats, **uniquement sur ton Mac**, dans un espace partagé entre l'app et son widget.
-- `install.sh` enregistre ton Team ID Apple dans `Config/Local.xcconfig`. Ce fichier est ignoré par git, il ne sera donc jamais publié par erreur.
+- The code **contains no personal data**. Everyone builds the app with their own Apple account and signs in with their own PSN account.
+- Your NPSSO token is sent **only to Sony's servers**. The app doesn't keep it: it only stores a refresh token and your latest stats, **only on your Mac**, in a space shared between the app and its widget.
+- `install.sh` saves your Apple Team ID in `Config/Local.xcconfig`. That file is ignored by git, so it can never be published by mistake.
 
-## Avertissement
+## Disclaimer
 
-Ce projet n'est **ni affilié à Sony Interactive Entertainment, ni approuvé par elle**. « PlayStation » et « PSN » sont des marques de Sony. Il utilise l'API de PlayStation Network de façon non officielle, comme d'autres outils communautaires : Sony peut la modifier à tout moment.
+This project is **not affiliated with, endorsed by or sponsored by Sony Interactive Entertainment**. "PlayStation" and "PSN" are trademarks of Sony. The app uses the PlayStation Network API unofficially, like other community tools, and Sony may change it at any time. Use it at your own risk and in line with PlayStation Network's terms of service.
 
 ---
 
-## Pour les développeurs
+## For developers
 
 ```
-App/       App de connexion (SwiftUI) + rendu des captures
-Widget/    Extension WidgetKit (timeline, rafraîchissement)
-Shared/    Client API PSN, modèles, stockage partagé, vues des widgets
-Config/    Signing.xcconfig (+ Local.xcconfig, généré, ignoré)
+App/       Sign-in app (SwiftUI) + screenshot rendering
+Widget/    WidgetKit extension (timeline, refresh)
+Shared/    PSN API client, models, shared storage, widget views, translations
+Config/    Signing.xcconfig (+ Local.xcconfig, generated, ignored)
 ```
 
-- Le projet Xcode est généré avec [XcodeGen](https://github.com/yonaskolb/XcodeGen) depuis `project.yml` (`xcodegen generate`). Le `.xcodeproj` est versionné, donc XcodeGen n'est pas nécessaire pour installer.
-- Pour ouvrir le projet dans Xcode, lance d'abord `install.sh` une fois : il crée `Config/Local.xcconfig` avec ton Team ID.
-- Régénérer les captures du README : compiler en Debug, puis `PSNTrophies.app/Contents/MacOS/PSNTrophies --render-preview docs`.
+- The Xcode project is generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen) from `project.yml` (`xcodegen generate`). The `.xcodeproj` is committed, so you don't need XcodeGen to install.
+- Before opening the project in Xcode, run `install.sh` once: it creates `Config/Local.xcconfig` with your Team ID.
+- Translations live in `Shared/Localizable.xcstrings`, with English as the source language and French translated. Adding a language is a matter of filling that catalog in Xcode.
+- To regenerate the screenshots, build in Debug, then run `PSNTrophies.app/Contents/MacOS/PSNTrophies --render-preview docs -AppleLanguages "(en)"`.
 
-Licence [MIT](LICENSE).
+Licensed under [MIT](LICENSE).

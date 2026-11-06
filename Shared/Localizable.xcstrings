@@ -1,0 +1,316 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "%@ trophies": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ trophées"
+          }
+        }
+      }
+    },
+    "Bronze": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bronze"
+          }
+        }
+      }
+    },
+    "Connect": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecter"
+          }
+        }
+      }
+    },
+    "Connect your PlayStation account": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecte ton compte PlayStation"
+          }
+        }
+      }
+    },
+    "Connected — the widget updates on its own.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecté — le widget se met à jour tout seul."
+          }
+        }
+      }
+    },
+    "Copy the “npsso” value (64 characters) or the whole page, and paste it here:": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copie la valeur de « npsso » (64 caractères) ou toute la page, et colle-la ici :"
+          }
+        }
+      }
+    },
+    "Error %lld while contacting %@.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erreur %lld en contactant %@."
+          }
+        }
+      }
+    },
+    "Gold": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Or"
+          }
+        }
+      }
+    },
+    "In the same browser, open ": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans le même navigateur, ouvre "
+          }
+        }
+      }
+    },
+    "Invalid or expired NPSSO token. Sign in again on playstation.com and get a new token.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton NPSSO invalide ou expiré. Reconnecte-toi sur playstation.com et récupère un nouveau jeton."
+          }
+        }
+      }
+    },
+    "LEVEL": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NIVEAU"
+          }
+        }
+      }
+    },
+    "Last updated: %@": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dernière mise à jour : %@"
+          }
+        }
+      }
+    },
+    "My profile": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mon profil"
+          }
+        }
+      }
+    },
+    "NPSSO token": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton NPSSO"
+          }
+        }
+      }
+    },
+    "Not connected. Open the PSN Trophies app to sign in.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas connecté. Ouvre l'app Trophées PSN pour te connecter."
+          }
+        }
+      }
+    },
+    "Open the PSN Trophies app to sign in.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvre l'app Trophées PSN pour te connecter."
+          }
+        }
+      }
+    },
+    "PSN Trophies": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trophées PSN"
+          }
+        }
+      }
+    },
+    "Platinum": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Platine"
+          }
+        }
+      }
+    },
+    "PlayStation Trophies": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trophées PlayStation"
+          }
+        }
+      }
+    },
+    "PlayStation session expired. Sign in again from the app.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Session PlayStation expirée. Reconnecte-toi depuis l'app."
+          }
+        }
+      }
+    },
+    "RECENT": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RÉCEMMENT"
+          }
+        }
+      }
+    },
+    "Refresh": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualiser"
+          }
+        }
+      }
+    },
+    "Sign Out": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se déconnecter"
+          }
+        }
+      }
+    },
+    "Sign in to your account on ": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecte-toi à ton compte sur "
+          }
+        }
+      }
+    },
+    "Silver": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Argent"
+          }
+        }
+      }
+    },
+    "The token is only sent to Sony’s servers. The app only keeps a refresh token (valid for about 2 months), stored on this Mac.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le jeton n'est envoyé qu'aux serveurs de Sony. L'app ne garde qu'un jeton de rafraîchissement (valable environ 2 mois), stocké sur ce Mac."
+          }
+        }
+      }
+    },
+    "To add the widget: right-click the desktop → Edit Widgets… → search for “PSN Trophies”.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pour ajouter le widget : clic droit sur le bureau → Modifier les widgets… → cherche « Trophées PSN »."
+          }
+        }
+      }
+    },
+    "Your level, platinum, gold, silver and bronze trophies, and your recent games.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton niveau, tes trophées platine, or, argent, bronze et tes jeux récents."
+          }
+        }
+      }
+    },
+    "average": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "moyenne"
+          }
+        }
+      }
+    },
+    "completed": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "à 100 %"
+          }
+        }
+      }
+    },
+    "games": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "jeux"
+          }
+        }
+      }
+    }
+  }
+}

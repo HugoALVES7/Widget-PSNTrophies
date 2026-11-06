@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		093C46895A3DB3DF7293977F /* PSNTrophiesWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7A19060FFD57D54C3E2829F /* PSNTrophiesWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		32DDD000FA8A3D9CF1E9B4EF /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B778CA92B58959713DB92271 /* Localizable.xcstrings */; };
 		45BEBE4DC4E2D80E62EBB814 /* TrophyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83DB299A0EAF0F5A458C14 /* TrophyViews.swift */; };
 		48B1FF092A5BC1EA7CA2CC65 /* PSNTrophiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65499817111611D1C2BAFF /* PSNTrophiesApp.swift */; };
 		4B1295FEF248376B7C87E331 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0840307759749A3711D33747 /* SharedStore.swift */; };
 		4CAF5B0C0C3D48B646B707A2 /* PSNClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F490025CA35B939BD003134 /* PSNClient.swift */; };
+		72A9F8A667FB694E88FA9B5A /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CE793D4DF5F7B4572D9CAA81 /* InfoPlist.xcstrings */; };
 		72DE40916F0387C233641FBB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2155FF96C3B567C8056EC /* Models.swift */; };
+		81FA0890532BBD0764AE0F4E /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CE793D4DF5F7B4572D9CAA81 /* InfoPlist.xcstrings */; };
 		914501DB0ED89546684D067E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BD02317767D5B21B33EC /* ContentView.swift */; };
 		92825909F710703C29080C62 /* TrophyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83DB299A0EAF0F5A458C14 /* TrophyViews.swift */; };
 		93B3ABF83973699CF4FD64C1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2155FF96C3B567C8056EC /* Models.swift */; };
 		941DC90D408E505B68D13FDD /* TrophyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF799202579F5FAB40549AA /* TrophyWidget.swift */; };
+		A69331A7E1CDD8808B8C918D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B778CA92B58959713DB92271 /* Localizable.xcstrings */; };
 		B3232A87E2169D16694A856D /* PSNClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F490025CA35B939BD003134 /* PSNClient.swift */; };
 		F7FFC34CC95E9A9585AF0CBF /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0840307759749A3711D33747 /* SharedStore.swift */; };
 /* End PBXBuildFile section */
@@ -58,8 +62,10 @@
 		A341BD02317767D5B21B33EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A8EF7D694991582E7822F64D /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
 		B59767FCC474245064E7EBD0 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+		B778CA92B58959713DB92271 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B7A19060FFD57D54C3E2829F /* PSNTrophiesWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PSNTrophiesWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA65499817111611D1C2BAFF /* PSNTrophiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSNTrophiesApp.swift; sourceTree = "<group>"; };
+		CE793D4DF5F7B4572D9CAA81 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -77,6 +83,8 @@
 		3FF99D3A4C01CEFC0F25133A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CE793D4DF5F7B4572D9CAA81 /* InfoPlist.xcstrings */,
+				B778CA92B58959713DB92271 /* Localizable.xcstrings */,
 				26B2155FF96C3B567C8056EC /* Models.swift */,
 				9F490025CA35B939BD003134 /* PSNClient.swift */,
 				0840307759749A3711D33747 /* SharedStore.swift */,
@@ -131,6 +139,7 @@
 			buildConfigurationList = E4417EBD69C36F3900B97B0D /* Build configuration list for PBXNativeTarget "PSNTrophies" */;
 			buildPhases = (
 				A7A10C21B472AF072A58E505 /* Sources */,
+				3132BF5B2D1596DC092D3DAF /* Resources */,
 				5FAF72E56BC78BF53D670E3A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -150,6 +159,7 @@
 			buildConfigurationList = 3B65F27CD3655D2E56CDD9C6 /* Build configuration list for PBXNativeTarget "PSNTrophiesWidget" */;
 			buildPhases = (
 				E8936D9E5C31C99E18D5E51A /* Sources */,
+				3F260E048BAB3184D115E8ED /* Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +197,7 @@
 			knownRegions = (
 				Base,
 				en,
+				fr,
 			);
 			mainGroup = 2DF5CD5B55535C9B1ABA3D93;
 			minimizedProjectReferenceProxies = 1;
@@ -200,6 +211,27 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3132BF5B2D1596DC092D3DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A9F8A667FB694E88FA9B5A /* InfoPlist.xcstrings in Resources */,
+				A69331A7E1CDD8808B8C918D /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F260E048BAB3184D115E8ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81FA0890532BBD0764AE0F4E /* InfoPlist.xcstrings in Resources */,
+				32DDD000FA8A3D9CF1E9B4EF /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7A10C21B472AF072A58E505 /* Sources */ = {

@@ -1,7 +1,7 @@
 import SwiftUI
 import WidgetKit
 
-/// Les photos suivent le style d'icônes du Mac (couleur, teinté, transparent), comme le Dock.
+/// Photos follow the Mac's icon & widget style (default, tinted, clear), like the Dock.
 @ViewBuilder
 private func photo(_ image: NSImage) -> some View {
     let base = Image(nsImage: image).resizable()
@@ -12,17 +12,17 @@ private func photo(_ image: NSImage) -> some View {
     }
 }
 
-// MARK: - Trophées
+// MARK: - Trophies
 
 enum TrophyKind: CaseIterable {
     case platinum, gold, silver, bronze
 
     var label: String {
         switch self {
-        case .platinum: "Platine"
-        case .gold: "Or"
-        case .silver: "Argent"
-        case .bronze: "Bronze"
+        case .platinum: String(localized: "Platinum")
+        case .gold: String(localized: "Gold")
+        case .silver: String(localized: "Silver")
+        case .bronze: String(localized: "Bronze")
         }
     }
 
@@ -48,7 +48,7 @@ enum TrophyKind: CaseIterable {
         }
     }
 
-    /// Couleur du palier de niveau PSN (1–3 bronze, 4–6 argent, 7–9 or, 10 platine).
+    /// PSN level tier color (1–3 bronze, 4–6 silver, 7–9 gold, 10 platinum).
     static func forTier(_ tier: Int) -> TrophyKind {
         switch tier {
         case ...3: .bronze
@@ -93,7 +93,7 @@ struct TrophyStat: View {
     }
 }
 
-// MARK: - Niveau
+// MARK: - Level
 
 struct LevelRing: View {
     let level: Int
@@ -116,7 +116,7 @@ struct LevelRing: View {
                     .font(.system(size: size * 0.30, weight: .bold, design: .rounded))
                     .minimumScaleFactor(0.6)
                     .lineLimit(1)
-                Text("NIVEAU")
+                Text("LEVEL")
                     .font(.system(size: max(7, size * 0.11), weight: .semibold))
                     .foregroundStyle(.secondary)
             }
@@ -145,7 +145,7 @@ struct AvatarView: View {
     }
 }
 
-// MARK: - Tailles du widget
+// MARK: - Widget sizes
 
 struct SmallTrophyView: View {
     let snapshot: PSNSnapshot
@@ -172,7 +172,7 @@ struct SmallTrophyView: View {
                 }
             }
             Spacer(minLength: 6)
-            Text("\(snapshot.earned.total.formatted()) trophées")
+            Text("\(snapshot.earned.total.formatted()) trophies")
                 .font(.caption2)
                 .foregroundStyle(.secondary)
         }
@@ -189,7 +189,7 @@ struct MediumTrophyView: View {
                 Text(snapshot.onlineId)
                     .font(.caption.weight(.semibold))
                     .lineLimit(1)
-                Text("\(snapshot.earned.total.formatted()) trophées")
+                Text("\(snapshot.earned.total.formatted()) trophies")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
@@ -221,7 +221,7 @@ struct LargeTrophyView: View {
                     Text(snapshot.onlineId)
                         .font(.headline)
                         .lineLimit(1)
-                    Text("\(snapshot.earned.total.formatted()) trophées")
+                    Text("\(snapshot.earned.total.formatted()) trophies")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -249,14 +249,14 @@ struct LargeTrophyView: View {
             Spacer(minLength: 14)
 
             HStack(spacing: 0) {
-                InlineStat(value: snapshot.totalGames.formatted(), label: "jeux")
-                InlineStat(value: snapshot.completedGames.formatted(), label: "à 100 %")
-                InlineStat(value: "\(Int(snapshot.averageCompletion.rounded())) %", label: "moyenne")
+                InlineStat(value: snapshot.totalGames.formatted(), label: String(localized: "games"))
+                InlineStat(value: snapshot.completedGames.formatted(), label: String(localized: "completed"))
+                InlineStat(value: (snapshot.averageCompletion / 100).formatted(.percent.precision(.fractionLength(0))), label: String(localized: "average"))
             }
 
             Spacer(minLength: 16)
 
-            Text("RÉCEMMENT")
+            Text("RECENT")
                 .font(.system(size: 9, weight: .semibold))
                 .foregroundStyle(.secondary)
                 .padding(.bottom, 8)
@@ -331,7 +331,7 @@ struct GameRow: View {
                         TrophyIcon(kind: .platinum, size: 9)
                     }
                     Spacer(minLength: 4)
-                    Text("\(game.progress) %")
+                    Text((Double(game.progress) / 100).formatted(.percent.precision(.fractionLength(0))))
                         .font(.caption2.weight(.semibold))
                         .monospacedDigit()
                         .foregroundStyle(.secondary)
@@ -361,7 +361,7 @@ struct ProgressBar: View {
 }
 
 struct DisconnectedView: View {
-    var message = "Ouvre l'app Trophées PSN pour te connecter."
+    var message = String(localized: "Open the PSN Trophies app to sign in.")
 
     var body: some View {
         VStack(spacing: 8) {

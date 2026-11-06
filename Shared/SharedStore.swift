@@ -1,6 +1,6 @@
 import Foundation
 
-/// Stockage partagé entre l'app et le widget (App Group).
+/// Storage shared between the app and the widget (App Group).
 enum SharedStore {
     static var groupID: String {
         (Bundle.main.object(forInfoDictionaryKey: "AppGroupID") as? String) ?? "group.psntrophies"

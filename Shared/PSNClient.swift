@@ -13,15 +13,15 @@ enum PSNError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .notConnected: "Pas connecté. Ouvre l'app Trophées PSN pour te connecter."
-        case .invalidNPSSO: "Jeton NPSSO invalide ou expiré. Reconnecte-toi sur playstation.com et récupère un nouveau jeton."
-        case .sessionExpired: "Session PlayStation expirée. Reconnecte-toi depuis l'app."
-        case let .http(code, url): "Erreur \(code) en contactant \(url)."
+        case .notConnected: String(localized: "Not connected. Open the PSN Trophies app to sign in.")
+        case .invalidNPSSO: String(localized: "Invalid or expired NPSSO token. Sign in again on playstation.com and get a new token.")
+        case .sessionExpired: String(localized: "PlayStation session expired. Sign in again from the app.")
+        case let .http(code, url): String(localized: "Error \(code) while contacting \(url).")
         }
     }
 }
 
-/// Client minimal pour l'API trophées officielle de PlayStation Network.
+/// Minimal client for the PlayStation Network trophy API.
 struct PSNClient {
     private static let clientID = "09515159-7237-4370-9b40-3806e67c0891"
     private static let basicAuth = "MDk1MTUxNTktNzIzNy00MzcwLTliNDAtMzgwNmU2N2MwODkxOnVjUGprYTV0bnRCMktxc1A="
@@ -30,9 +30,9 @@ struct PSNClient {
     private static let authBase = "https://ca.account.sony.com/api/authz/v3/oauth"
     private static let apiBase = "https://m.np.playstation.com/api"
 
-    // MARK: - Authentification
+    // MARK: - Authentication
 
-    /// Échange le jeton NPSSO (copié par l'utilisateur) contre des jetons d'accès.
+    /// Exchanges the NPSSO token (pasted by the user) for access tokens.
     func connect(npsso: String) async throws {
         var comps = URLComponents(string: "\(Self.authBase)/authorize")!
         comps.queryItems = [
@@ -117,7 +117,7 @@ struct PSNClient {
         return token
     }
 
-    // MARK: - Données
+    // MARK: - Data
 
     func fetchSnapshot(recentCount: Int = 4) async throws -> PSNSnapshot {
         let token = try await validAccessToken()
@@ -153,11 +153,11 @@ struct PSNClient {
         }
 
         let avatar = await Self.downloadThumbnail(profile?.avatarURL, maxPixel: 128)
-        log.info("avatar: \(avatar?.count ?? 0, privacy: .public) octets")
+        log.info("avatar: \(avatar?.count ?? 0, privacy: .public) bytes")
         let average = titles.isEmpty ? 0 : Double(titles.map(\.progress).reduce(0, +)) / Double(titles.count)
 
         return PSNSnapshot(
-            onlineId: profile?.onlineId ?? "Mon profil",
+            onlineId: profile?.onlineId ?? String(localized: "My profile"),
             avatarData: avatar,
             level: summary.trophyLevel.value,
             levelProgress: summary.progress ?? 0,
@@ -194,10 +194,10 @@ struct PSNClient {
             let p: Profile = try await get("\(Self.apiBase)/userProfile/v1/internal/users/me/profiles", token: token)
             onlineId = p.onlineId
             let best = p.avatars?.max { (rank[$0.size] ?? 0) < (rank[$1.size] ?? 0) }?.url
-            log.info("profil: \(p.avatars?.count ?? -1, privacy: .public) avatars, url=\(best ?? "nil", privacy: .public)")
+            log.info("profile: \(p.avatars?.count ?? -1, privacy: .public) avatars, url=\(best ?? "nil", privacy: .public)")
             if let best { return (p.onlineId, Self.https(best)) }
         } catch {
-            log.error("profil (internal) échec: \(error.localizedDescription, privacy: .public)")
+            log.error("profile (internal) failed: \(error.localizedDescription, privacy: .public)")
         }
 
         struct LegacyAvatar: Decodable { let size: String; let avatarUrl: String }
@@ -208,15 +208,15 @@ struct PSNClient {
                 "https://us-prof.np.community.playstation.net/userProfile/v1/users/me/profile2?fields=onlineId,avatarUrls",
                 token: token)
             let best = r.profile.avatarUrls?.max { (rank[$0.size] ?? 0) < (rank[$1.size] ?? 0) }?.avatarUrl
-            log.info("profil legacy: url=\(best ?? "nil", privacy: .public)")
+            log.info("legacy profile: url=\(best ?? "nil", privacy: .public)")
             return (r.profile.onlineId, best.map(Self.https))
         } catch {
-            log.error("profil (legacy) échec: \(error.localizedDescription, privacy: .public)")
+            log.error("profile (legacy) failed: \(error.localizedDescription, privacy: .public)")
         }
         return onlineId.map { ($0, nil) }
     }
 
-    /// Les URLs d'avatar Sony sont parfois en http://, bloqué par macOS.
+    /// Sony avatar URLs are sometimes http://, which macOS blocks.
     private static func https(_ url: String) -> String {
         url.hasPrefix("http://") ? "https://" + url.dropFirst(7) : url
     }
@@ -231,7 +231,7 @@ struct PSNClient {
         return try JSONDecoder().decode(T.self, from: data)
     }
 
-    // MARK: - Utilitaires
+    // MARK: - Helpers
 
     private static func check(_ response: URLResponse, url: URL) throws {
         guard let http = response as? HTTPURLResponse else { return }
@@ -247,9 +247,9 @@ struct PSNClient {
         return f.date(from: string)
     }
 
-    /// Télécharge une image et la réduit (les widgets ont une mémoire très limitée).
+    /// Downloads an image and downsizes it (widgets have very little memory).
     static func downloadThumbnail(_ urlString: String?, maxPixel: Int) async -> Data? {
-        if let urlString, urlString.contains("avatar") || urlString.contains("prof") { log.info("téléchargement avatar: \(urlString, privacy: .public)") }
+        if let urlString, urlString.contains("avatar") || urlString.contains("prof") { log.info("downloading avatar: \(urlString, privacy: .public)") }
         guard let urlString, let url = URL(string: urlString),
               let (data, _) = try? await URLSession.shared.data(from: url),
               let source = CGImageSourceCreateWithData(data as CFData, nil),
@@ -263,7 +263,7 @@ struct PSNClient {
     }
 }
 
-// MARK: - Réponses de l'API
+// MARK: - API responses
 
 private struct FlexibleInt: Decodable {
     let value: Int
@@ -299,8 +299,8 @@ private struct TitlesPage: Decodable {
     let nextOffset: Int?
 }
 
-/// Empêche URLSession de suivre la redirection vers le schéma de l'app mobile,
-/// pour pouvoir lire le code d'autorisation dans l'en-tête Location.
+/// Stops URLSession from following the redirect to the mobile app's URL scheme,
+/// so the authorization code can be read from the Location header.
 private final class NoRedirect: NSObject, URLSessionTaskDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask,
                     willPerformHTTPRedirection response: HTTPURLResponse,

@@ -4,7 +4,7 @@ import WidgetKit
 @main
 struct PSNTrophiesApp: App {
     init() {
-        // `--render-preview <dossier>` : exporte des aperçus PNG des 3 tailles puis quitte.
+        // `--render-preview <folder>`: exports PNG previews of the 3 sizes, then quits.
         let args = CommandLine.arguments
         if let i = args.firstIndex(of: "--render-preview"), i + 1 < args.count {
             PreviewRenderer.render(to: URL(fileURLWithPath: args[i + 1]))
@@ -13,14 +13,14 @@ struct PSNTrophiesApp: App {
     }
 
     var body: some Scene {
-        WindowGroup("Trophées PSN") {
+        WindowGroup("PSN Trophies") {
             ContentView()
         }
         .windowResizability(.contentSize)
     }
 }
 
-/// Simule l'apparence d'un widget du bureau (tailles macOS).
+/// Mimics a desktop widget (macOS sizes).
 struct WidgetFrame<Content: View>: View {
     let width: CGFloat
     let height: CGFloat
@@ -67,7 +67,7 @@ enum PreviewRenderer {
         }
     }
 
-    /// Données fictives + fausses jaquettes (dégradés) pour les captures du README.
+    /// Fake data + fake cover art (gradients) for the README screenshots.
     private static func sampleWithImages() -> PSNSnapshot {
         func tile(_ colors: [Color], _ symbol: String, circle: Bool = false) -> Data? {
             let view = ZStack {

@@ -13,8 +13,8 @@ struct ContentView: View {
             HStack(spacing: 10) {
                 TrophyIcon(kind: .platinum, size: 28)
                 VStack(alignment: .leading) {
-                    Text("Trophées PSN").font(.title2.bold())
-                    Text(connected ? "Connecté — le widget se met à jour tout seul." : "Connecte ton compte PlayStation")
+                    Text("PSN Trophies").font(.title2.bold())
+                    (connected ? Text("Connected — the widget updates on its own.") : Text("Connect your PlayStation account"))
                         .foregroundStyle(.secondary)
                 }
             }
@@ -36,37 +36,37 @@ struct ContentView: View {
         .task { if connected { refresh() } }
     }
 
-    // MARK: Connexion
+    // MARK: Sign in
 
     private var setupSection: some View {
         VStack(alignment: .leading, spacing: 14) {
             Step(number: 1) {
-                Text("Connecte-toi à ton compte sur ") + Text("[playstation.com](https://www.playstation.com/)")
+                Text("Sign in to your account on ") + Text("[playstation.com](https://www.playstation.com/)")
             }
             Step(number: 2) {
-                Text("Dans le même navigateur, ouvre ") +
+                Text("In the same browser, open ") +
                     Text("[ca.account.sony.com/api/v1/ssocookie](https://ca.account.sony.com/api/v1/ssocookie)")
             }
             Step(number: 3) {
-                Text("Copie la valeur de « npsso » (64 caractères) ou toute la page, et colle-la ici :")
+                Text("Copy the “npsso” value (64 characters) or the whole page, and paste it here:")
             }
             HStack {
-                SecureField("Jeton NPSSO", text: $npsso)
+                SecureField("NPSSO token", text: $npsso)
                     .textFieldStyle(.roundedBorder)
                     .onSubmit(connect)
                 Button(action: connect) {
-                    if isBusy { ProgressView().controlSize(.small) } else { Text("Connecter") }
+                    if isBusy { ProgressView().controlSize(.small) } else { Text("Connect") }
                 }
                 .buttonStyle(.borderedProminent)
                 .disabled(npsso.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || isBusy)
             }
-            Text("Le jeton n'est envoyé qu'aux serveurs de Sony. L'app ne garde qu'un jeton de rafraîchissement (valable environ 2 mois), stocké sur ce Mac.")
+            Text("The token is only sent to Sony’s servers. The app only keeps a refresh token (valid for about 2 months), stored on this Mac.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }
     }
 
-    // MARK: Connecté
+    // MARK: Connected
 
     private var connectedSection: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -81,25 +81,25 @@ struct ContentView: View {
 
             HStack {
                 if let date = snapshot?.fetchedAt {
-                    Text("Dernière mise à jour : \(date.formatted(date: .abbreviated, time: .shortened))")
+                    Text("Last updated: \(date.formatted(date: .abbreviated, time: .shortened))")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
                 Spacer()
-                Button("Se déconnecter", role: .destructive) {
+                Button("Sign Out", role: .destructive) {
                     SharedStore.clear()
                     snapshot = nil
                     connected = false
                     WidgetCenter.shared.reloadAllTimelines()
                 }
                 Button(action: refresh) {
-                    if isBusy { ProgressView().controlSize(.small) } else { Label("Actualiser", systemImage: "arrow.clockwise") }
+                    if isBusy { ProgressView().controlSize(.small) } else { Label("Refresh", systemImage: "arrow.clockwise") }
                 }
                 .buttonStyle(.borderedProminent)
                 .disabled(isBusy)
             }
 
-            Text("Pour ajouter le widget : clic droit sur le bureau → Modifier les widgets… → cherche « Trophées PSN ».")
+            Text("To add the widget: right-click the desktop → Edit Widgets… → search for “PSN Trophies”.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }
@@ -144,7 +144,7 @@ struct ContentView: View {
         }
     }
 
-    /// Accepte soit le jeton seul, soit le JSON complet `{"npsso":"..."}`.
+    /// Accepts either the bare token or the full JSON `{"npsso":"..."}`.
     static func extractNPSSO(from input: String) -> String {
         let trimmed = input.trimmingCharacters(in: .whitespacesAndNewlines)
         if let data = trimmed.data(using: .utf8),

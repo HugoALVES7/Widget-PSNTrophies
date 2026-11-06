@@ -1,5 +1,6 @@
 name: PSNTrophies
 options:
+  developmentLanguage: en
   deploymentTarget:
     macOS: "14.0"
 configFiles:
@@ -20,7 +21,7 @@ targets:
     info:
       path: App/Info.plist
       properties:
-        CFBundleDisplayName: Trophées PSN
+        CFBundleDisplayName: PSN Trophies
         AppGroupID: $(TeamIdentifierPrefix)group.psntrophies
         LSApplicationCategoryType: public.app-category.games
     entitlements:
@@ -40,7 +41,7 @@ targets:
     info:
       path: Widget/Info.plist
       properties:
-        CFBundleDisplayName: Trophées PSN
+        CFBundleDisplayName: PSN Trophies
         AppGroupID: $(TeamIdentifierPrefix)group.psntrophies
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension

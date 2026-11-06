@@ -1,5 +1,5 @@
 #!/bin/bash
-# Double-clic pour installer Trophées PSN (clic droit → Ouvrir la première fois).
+# Double-click to install PSN Trophies (right-click → Open the first time).
 cd "$(dirname "$0")" && bash install.sh
 echo
-read -n 1 -s -r -p "Appuie sur une touche pour fermer cette fenêtre…"
+read -n 1 -s -r -p "Press any key to close / Appuie sur une touche pour fermer…"
