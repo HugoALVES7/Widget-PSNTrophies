@@ -1,0 +1,54 @@
+name: PSNTrophies
+options:
+  deploymentTarget:
+    macOS: "14.0"
+configFiles:
+  Debug: Config/Signing.xcconfig
+  Release: Config/Signing.xcconfig
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_HARDENED_RUNTIME: YES
+targets:
+  PSNTrophies:
+    type: application
+    platform: macOS
+    sources: [App, Shared]
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Trophées PSN
+        AppGroupID: $(TeamIdentifierPrefix)group.psntrophies
+        LSApplicationCategoryType: public.app-category.games
+    entitlements:
+      path: App/App.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.application-groups: [$(TeamIdentifierPrefix)group.psntrophies]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: $(BUNDLE_ID_PREFIX).PSNTrophies
+    dependencies:
+      - target: PSNTrophiesWidget
+  PSNTrophiesWidget:
+    type: app-extension
+    platform: macOS
+    sources: [Widget, Shared]
+    info:
+      path: Widget/Info.plist
+      properties:
+        CFBundleDisplayName: Trophées PSN
+        AppGroupID: $(TeamIdentifierPrefix)group.psntrophies
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: Widget/Widget.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.application-groups: [$(TeamIdentifierPrefix)group.psntrophies]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: $(BUNDLE_ID_PREFIX).PSNTrophies.Widget

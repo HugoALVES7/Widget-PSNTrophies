@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		093C46895A3DB3DF7293977F /* PSNTrophiesWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7A19060FFD57D54C3E2829F /* PSNTrophiesWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		45BEBE4DC4E2D80E62EBB814 /* TrophyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83DB299A0EAF0F5A458C14 /* TrophyViews.swift */; };
+		48B1FF092A5BC1EA7CA2CC65 /* PSNTrophiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65499817111611D1C2BAFF /* PSNTrophiesApp.swift */; };
+		4B1295FEF248376B7C87E331 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0840307759749A3711D33747 /* SharedStore.swift */; };
+		4CAF5B0C0C3D48B646B707A2 /* PSNClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F490025CA35B939BD003134 /* PSNClient.swift */; };
+		72DE40916F0387C233641FBB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2155FF96C3B567C8056EC /* Models.swift */; };
+		914501DB0ED89546684D067E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BD02317767D5B21B33EC /* ContentView.swift */; };
+		92825909F710703C29080C62 /* TrophyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83DB299A0EAF0F5A458C14 /* TrophyViews.swift */; };
+		93B3ABF83973699CF4FD64C1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B2155FF96C3B567C8056EC /* Models.swift */; };
+		941DC90D408E505B68D13FDD /* TrophyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF799202579F5FAB40549AA /* TrophyWidget.swift */; };
+		B3232A87E2169D16694A856D /* PSNClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F490025CA35B939BD003134 /* PSNClient.swift */; };
+		F7FFC34CC95E9A9585AF0CBF /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0840307759749A3711D33747 /* SharedStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DF640E3ABEB1F71A25BC659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CF76E886910C616460D4DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A30F627FB881609B57AB58E;
+			remoteInfo = PSNTrophiesWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FAF72E56BC78BF53D670E3A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				093C46895A3DB3DF7293977F /* PSNTrophiesWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0840307759749A3711D33747 /* SharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
+		1515FD5745D75A7A939871DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1BF799202579F5FAB40549AA /* TrophyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyWidget.swift; sourceTree = "<group>"; };
+		26B2155FF96C3B567C8056EC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		51A8CAE14F7331404C987C5D /* PSNTrophies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSNTrophies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5889CC57ACD2356E5F808D61 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
+		66471919762086BC6C30F7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9C83DB299A0EAF0F5A458C14 /* TrophyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyViews.swift; sourceTree = "<group>"; };
+		9F490025CA35B939BD003134 /* PSNClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSNClient.swift; sourceTree = "<group>"; };
+		A341BD02317767D5B21B33EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A8EF7D694991582E7822F64D /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		B59767FCC474245064E7EBD0 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+		B7A19060FFD57D54C3E2829F /* PSNTrophiesWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PSNTrophiesWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA65499817111611D1C2BAFF /* PSNTrophiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSNTrophiesApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2DF5CD5B55535C9B1ABA3D93 = {
+			isa = PBXGroup;
+			children = (
+				F470D9C921F3F3D753895CD9 /* App */,
+				5DB029BB659F261F5D31750C /* Config */,
+				3FF99D3A4C01CEFC0F25133A /* Shared */,
+				949301048EB54F5FC0559322 /* Widget */,
+				4F8150A6132DD3ECAC853B1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FF99D3A4C01CEFC0F25133A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				26B2155FF96C3B567C8056EC /* Models.swift */,
+				9F490025CA35B939BD003134 /* PSNClient.swift */,
+				0840307759749A3711D33747 /* SharedStore.swift */,
+				9C83DB299A0EAF0F5A458C14 /* TrophyViews.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4F8150A6132DD3ECAC853B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51A8CAE14F7331404C987C5D /* PSNTrophies.app */,
+				B7A19060FFD57D54C3E2829F /* PSNTrophiesWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DB029BB659F261F5D31750C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B59767FCC474245064E7EBD0 /* Signing.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		949301048EB54F5FC0559322 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				1515FD5745D75A7A939871DD /* Info.plist */,
+				1BF799202579F5FAB40549AA /* TrophyWidget.swift */,
+				5889CC57ACD2356E5F808D61 /* Widget.entitlements */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		F470D9C921F3F3D753895CD9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A8EF7D694991582E7822F64D /* App.entitlements */,
+				A341BD02317767D5B21B33EC /* ContentView.swift */,
+				66471919762086BC6C30F7BB /* Info.plist */,
+				BA65499817111611D1C2BAFF /* PSNTrophiesApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04C84DB5B0A2CFE33FBD56EC /* PSNTrophies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4417EBD69C36F3900B97B0D /* Build configuration list for PBXNativeTarget "PSNTrophies" */;
+			buildPhases = (
+				A7A10C21B472AF072A58E505 /* Sources */,
+				5FAF72E56BC78BF53D670E3A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A17FD0CE98EEB7EA979DF499 /* PBXTargetDependency */,
+			);
+			name = PSNTrophies;
+			packageProductDependencies = (
+			);
+			productName = PSNTrophies;
+			productReference = 51A8CAE14F7331404C987C5D /* PSNTrophies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A30F627FB881609B57AB58E /* PSNTrophiesWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B65F27CD3655D2E56CDD9C6 /* Build configuration list for PBXNativeTarget "PSNTrophiesWidget" */;
+			buildPhases = (
+				E8936D9E5C31C99E18D5E51A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PSNTrophiesWidget;
+			packageProductDependencies = (
+			);
+			productName = PSNTrophiesWidget;
+			productReference = B7A19060FFD57D54C3E2829F /* PSNTrophiesWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10CF76E886910C616460D4DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					04C84DB5B0A2CFE33FBD56EC = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					6A30F627FB881609B57AB58E = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 11D7191A19401D8169AA15A7 /* Build configuration list for PBXProject "PSNTrophies" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2DF5CD5B55535C9B1ABA3D93;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4F8150A6132DD3ECAC853B1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04C84DB5B0A2CFE33FBD56EC /* PSNTrophies */,
+				6A30F627FB881609B57AB58E /* PSNTrophiesWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7A10C21B472AF072A58E505 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				914501DB0ED89546684D067E /* ContentView.swift in Sources */,
+				72DE40916F0387C233641FBB /* Models.swift in Sources */,
+				4CAF5B0C0C3D48B646B707A2 /* PSNClient.swift in Sources */,
+				48B1FF092A5BC1EA7CA2CC65 /* PSNTrophiesApp.swift in Sources */,
+				F7FFC34CC95E9A9585AF0CBF /* SharedStore.swift in Sources */,
+				45BEBE4DC4E2D80E62EBB814 /* TrophyViews.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8936D9E5C31C99E18D5E51A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B3ABF83973699CF4FD64C1 /* Models.swift in Sources */,
+				B3232A87E2169D16694A856D /* PSNClient.swift in Sources */,
+				4B1295FEF248376B7C87E331 /* SharedStore.swift in Sources */,
+				92825909F710703C29080C62 /* TrophyViews.swift in Sources */,
+				941DC90D408E505B68D13FDD /* TrophyWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A17FD0CE98EEB7EA979DF499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A30F627FB881609B57AB58E /* PSNTrophiesWidget */;
+			targetProxy = 6DF640E3ABEB1F71A25BC659 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D46B491A122043471967236 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B59767FCC474245064E7EBD0 /* Signing.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		34DD7A8D22056597BDBF02B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B59767FCC474245064E7EBD0 /* Signing.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3B48925FB2956D7603AD018A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).PSNTrophies";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5F4ADB7DC258832FC5A6EE51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).PSNTrophies";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		828F605451A083726BADF926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).PSNTrophies.Widget";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C2F48ACE4F54399EEE342C50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID_PREFIX).PSNTrophies.Widget";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11D7191A19401D8169AA15A7 /* Build configuration list for PBXProject "PSNTrophies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34DD7A8D22056597BDBF02B8 /* Debug */,
+				1D46B491A122043471967236 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3B65F27CD3655D2E56CDD9C6 /* Build configuration list for PBXNativeTarget "PSNTrophiesWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F48ACE4F54399EEE342C50 /* Debug */,
+				828F605451A083726BADF926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E4417EBD69C36F3900B97B0D /* Build configuration list for PBXNativeTarget "PSNTrophies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F4ADB7DC258832FC5A6EE51 /* Debug */,
+				3B48925FB2956D7603AD018A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10CF76E886910C616460D4DC /* Project object */;
+}

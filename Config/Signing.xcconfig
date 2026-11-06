@@ -1,0 +1,7 @@
+// Réglages de signature.
+// Ne mets PAS tes infos ici : crée Config/Local.xcconfig (ignoré par git),
+// ou lance simplement ./install.sh qui le crée pour toi.
+DEVELOPMENT_TEAM =
+BUNDLE_ID_PREFIX = com.example.psntrophies
+
+#include? "Local.xcconfig"

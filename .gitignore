@@ -1,0 +1,13 @@
+# Compilation
+build/
+DerivedData/
+
+# Réglages propres à chaque Mac (Team ID Apple)
+Config/Local.xcconfig
+
+# Xcode utilisateur
+xcuserdata/
+*.xcuserstate
+
+# macOS
+.DS_Store
