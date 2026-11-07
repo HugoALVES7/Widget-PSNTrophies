@@ -13,7 +13,7 @@ struct ContentView: View {
             HStack(spacing: 10) {
                 TrophyIcon(kind: .platinum, size: 28)
                 VStack(alignment: .leading) {
-                    Text("PSN Trophies").font(.title2.bold())
+                    Text("Widget PSNTrophies").font(.title2.bold())
                     (connected ? Text("Connected — the widget updates on its own.") : Text("Connect your PlayStation account"))
                         .foregroundStyle(.secondary)
                 }
@@ -99,7 +99,7 @@ struct ContentView: View {
                 .disabled(isBusy)
             }
 
-            Text("To add the widget: right-click the desktop → Edit Widgets… → search for “PSN Trophies”.")
+            Text("To add the widget: right-click the desktop → Edit Widgets… → search for “Widget PSNTrophies”.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
         }

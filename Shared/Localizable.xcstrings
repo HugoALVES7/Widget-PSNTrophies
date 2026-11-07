@@ -142,32 +142,22 @@
         }
       }
     },
-    "Not connected. Open the PSN Trophies app to sign in.": {
+    "Not connected. Open the Widget PSNTrophies app to sign in.": {
       "localizations": {
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pas connecté. Ouvre l'app Trophées PSN pour te connecter."
+            "value": "Pas connecté. Ouvre l'app Widget PSNTrophies pour te connecter."
           }
         }
       }
     },
-    "Open the PSN Trophies app to sign in.": {
+    "Open the Widget PSNTrophies app to sign in.": {
       "localizations": {
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ouvre l'app Trophées PSN pour te connecter."
-          }
-        }
-      }
-    },
-    "PSN Trophies": {
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Trophées PSN"
+            "value": "Ouvre l'app Widget PSNTrophies pour te connecter."
           }
         }
       }
@@ -178,16 +168,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Platine"
-          }
-        }
-      }
-    },
-    "PlayStation Trophies": {
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Trophées PlayStation"
           }
         }
       }
@@ -262,12 +242,22 @@
         }
       }
     },
-    "To add the widget: right-click the desktop → Edit Widgets… → search for “PSN Trophies”.": {
+    "To add the widget: right-click the desktop → Edit Widgets… → search for “Widget PSNTrophies”.": {
       "localizations": {
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pour ajouter le widget : clic droit sur le bureau → Modifier les widgets… → cherche « Trophées PSN »."
+            "value": "Pour ajouter le widget : clic droit sur le bureau → Modifier les widgets… → cherche « Widget PSNTrophies »."
+          }
+        }
+      }
+    },
+    "Widget PSNTrophies": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget PSNTrophies"
           }
         }
       }

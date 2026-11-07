@@ -361,7 +361,7 @@ struct ProgressBar: View {
 }
 
 struct DisconnectedView: View {
-    var message = String(localized: "Open the PSN Trophies app to sign in.")
+    var message = String(localized: "Open the Widget PSNTrophies app to sign in.")
 
     var body: some View {
         VStack(spacing: 8) {

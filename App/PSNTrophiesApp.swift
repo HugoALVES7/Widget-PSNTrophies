@@ -13,7 +13,7 @@ struct PSNTrophiesApp: App {
     }
 
     var body: some Scene {
-        WindowGroup("PSN Trophies") {
+        WindowGroup("Widget PSNTrophies") {
             ContentView()
         }
         .windowResizability(.contentSize)

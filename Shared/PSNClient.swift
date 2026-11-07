@@ -13,7 +13,7 @@ enum PSNError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .notConnected: String(localized: "Not connected. Open the PSN Trophies app to sign in.")
+        case .notConnected: String(localized: "Not connected. Open the Widget PSNTrophies app to sign in.")
         case .invalidNPSSO: String(localized: "Invalid or expired NPSSO token. Sign in again on playstation.com and get a new token.")
         case .sessionExpired: String(localized: "PlayStation session expired. Sign in again from the app.")
         case let .http(code, url): String(localized: "Error \(code) while contacting \(url).")

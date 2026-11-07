@@ -51,7 +51,7 @@ struct TrophyWidgetView: View {
             default: MediumTrophyView(snapshot: snapshot)
             }
         } else {
-            DisconnectedView(message: entry.error ?? String(localized: "Open the PSN Trophies app to sign in."))
+            DisconnectedView(message: entry.error ?? String(localized: "Open the Widget PSNTrophies app to sign in."))
         }
     }
 }
@@ -63,7 +63,7 @@ struct PSNTrophiesWidget: Widget {
             TrophyWidgetView(entry: entry)
                 .containerBackground(.background, for: .widget)
         }
-        .configurationDisplayName("PlayStation Trophies")
+        .configurationDisplayName("Widget PSNTrophies")
         .description("Your level, platinum, gold, silver and bronze trophies, and your recent games.")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }

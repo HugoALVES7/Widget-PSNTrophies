@@ -1,4 +1,4 @@
-# 🏆 PSN Trophies — macOS widget
+# 🏆 Widget PSNTrophies
 
 🇬🇧 **English** · 🇫🇷 [Français](README.fr.md)
 
@@ -82,7 +82,7 @@ The script does everything on its own:
 🏆 Done!
 ```
 
-When it finishes, the **PSN Trophies** app opens.
+When it finishes, the **Widget PSNTrophies** app opens.
 
 <sub>If macOS asks for keychain access during the build, enter your Mac login password and click **Always Allow**.</sub>
 
@@ -93,7 +93,7 @@ The app needs a token called **NPSSO** to read your trophies. You only fetch it 
 1. In your browser, sign in at **[playstation.com](https://www.playstation.com/)**.
 2. In the **same browser**, open **[ca.account.sony.com/api/v1/ssocookie](https://ca.account.sony.com/api/v1/ssocookie)**.
 3. You'll see a line like `{"npsso":"aBcD1234…"}`. Copy **the whole line** or just the value.
-4. Paste it into the **PSN Trophies** app and click **Connect**.
+4. Paste it into the **Widget PSNTrophies** app and click **Connect**.
 
 A preview of your stats appears in the app. If macOS asks whether the app may *access data from other apps*, click **Allow**: that's what lets the widget read your stats.
 
@@ -102,7 +102,7 @@ A preview of your stats appears in the app. If macOS asks whether the app may *a
 ### 7. Add the widget to your desktop
 
 1. **Right-click the desktop** → **Edit Widgets…**
-2. Search for **"PSN Trophies"**.
+2. Search for **"Widget PSNTrophies"**.
 3. Pick a size and drag it onto the desktop. You can add several.
 
 You're done! 🎉
@@ -151,7 +151,7 @@ The connection lasts about 2 months. Open the app and paste a new NPSSO token (s
 <details>
 <summary><b>The widget isn't in the list, or shows an old version</b></summary>
 
-Open the PSN Trophies app once, wait a few seconds, then try again. If needed, remove the widget from the desktop and add it back, or restart your Mac.
+Open the Widget PSNTrophies app once, wait a few seconds, then try again. If needed, remove the widget from the desktop and add it back, or restart your Mac.
 </details>
 
 <details>

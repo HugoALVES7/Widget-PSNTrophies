@@ -1,4 +1,4 @@
-# 🏆 Trophées PSN — widget macOS
+# 🏆 Widget PSNTrophies
 
 🇬🇧 [English](README.md) · 🇫🇷 **Français**
 
@@ -82,7 +82,7 @@ Le script fait tout seul :
 🏆 Terminé !
 ```
 
-À la fin, l'app **Trophées PSN** s'ouvre.
+À la fin, l'app **Widget PSNTrophies** s'ouvre.
 
 <sub>Si macOS demande l'accès au trousseau pendant la compilation, entre le mot de passe de ta session Mac et clique sur **Toujours autoriser**.</sub>
 
@@ -93,7 +93,7 @@ L'app a besoin d'un jeton appelé **NPSSO** pour lire tes trophées. Il ne se r�
 1. Dans ton navigateur, connecte-toi sur **[playstation.com](https://www.playstation.com/)**.
 2. Dans le **même navigateur**, ouvre **[ca.account.sony.com/api/v1/ssocookie](https://ca.account.sony.com/api/v1/ssocookie)**.
 3. Tu vois une ligne du type `{"npsso":"aBcD1234…"}`. Copie **toute la ligne** ou seulement la valeur.
-4. Colle-la dans l'app **Trophées PSN** et clique sur **Connecter**.
+4. Colle-la dans l'app **Widget PSNTrophies** et clique sur **Connecter**.
 
 L'aperçu de tes stats apparaît dans l'app. Si macOS demande si l'app peut *accéder aux données d'autres apps*, clique sur **Autoriser** : c'est ce qui permet au widget de lire tes stats.
 
@@ -102,7 +102,7 @@ L'aperçu de tes stats apparaît dans l'app. Si macOS demande si l'app peut *acc
 ### 7. Ajouter le widget au bureau
 
 1. **Clic droit sur le bureau** → **Modifier les widgets…**
-2. Cherche **« Trophées PSN »**.
+2. Cherche **« Widget PSNTrophies »**.
 3. Choisis une taille et glisse-la sur le bureau (tu peux en mettre plusieurs).
 
 C'est fini ! 🎉
@@ -151,7 +151,7 @@ La connexion dure environ 2 mois. Ouvre l'app et recolle un nouveau jeton NPSSO 
 <details>
 <summary><b>Le widget n'apparaît pas dans la liste, ou affiche une ancienne version</b></summary>
 
-Ouvre l'app Trophées PSN une fois, attends quelques secondes, puis réessaie. Au besoin, retire le widget du bureau et remets-le, ou redémarre le Mac.
+Ouvre l'app Widget PSNTrophies une fois, attends quelques secondes, puis réessaie. Au besoin, retire le widget du bureau et remets-le, ou redémarre le Mac.
 </details>
 
 <details>

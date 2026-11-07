@@ -1,5 +1,5 @@
 #!/bin/bash
-# Installs PSN Trophies (app + widget) on this Mac.
+# Installs Widget PSNTrophies (app + widget) on this Mac.
 # Usage: bash install.sh             (detects your Apple account automatically)
 #        bash install.sh ABCDE12345  (force a specific Team ID)
 set -euo pipefail
@@ -105,6 +105,6 @@ ok "$(t "Installed:" "Installé :") /Applications/$APP_NAME"
 
 open "/Applications/$APP_NAME"
 printf "\n\033[1;32m🏆 %s\033[0m %s\n" "$(t "Done!" "Terminé !")" \
-  "$(t "The PSN Trophies app is open: connect your PlayStation account," "L'app Trophées PSN est ouverte : connecte ton compte PlayStation,")"
-printf "   %s\n\n" "$(t "then right-click the desktop → Edit Widgets… → “PSN Trophies”." \
-                     "puis clic droit sur le bureau → Modifier les widgets… → « Trophées PSN ».")"
+  "$(t "The Widget PSNTrophies app is open: connect your PlayStation account," "L'app Widget PSNTrophies est ouverte : connecte ton compte PlayStation,")"
+printf "   %s\n\n" "$(t "then right-click the desktop → Edit Widgets… → “Widget PSNTrophies”." \
+                     "puis clic droit sur le bureau → Modifier les widgets… → « Widget PSNTrophies ».")"
